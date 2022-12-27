@@ -28,6 +28,7 @@
 
 .doodle{
      position: absolute;
+     object-fit: cover;
      width: 600px;
      height: 340px;
      top: 250px;
@@ -74,4 +75,95 @@
      background-color: #39CDCC;
      border-radius: 5px;
      cursor: pointer;
+}
+
+
+@media screen and (max-width:1200px){
+     .loginLeft{
+          width: 40%;
+     }
+
+     .doodle{
+          width: 100%;
+          left: 40px;
+     }
+     .logo{
+          left: 60px;
+     }
+
+     .loginRight{
+          width: 60%;
+     }
+
+}
+
+@media screen and (max-width:1000px){
+     
+     .doodle{
+          width: 80%;
+     }
+}
+
+
+@media screen and (max-width:900px){
+     
+}
+
+@media screen and (max-width:800px){
+     .login{
+          width: 100vw;
+          flex-direction: column;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+     }
+
+     .loginLeft, .loginRight{
+          width: 100%;
+     }
+
+     .doodle{
+          display: none;
+     }
+
+     .loginLeft{
+          height: 20vh;
+     }
+     .loginRight{
+          height: 80vh;
+          margin-top: 50px;
+          padding: 0px 60px;
+     }
+
+     .loginForm{
+          padding: 0px;
+     }
+
+     .welcomeTxt{
+          font-size: 30px;
+          margin-top: 50px;
+     }
+     .enterTxt{
+          font-size: 16px;
+          margin-bottom: 30px;
+     }
+}
+
+@media screen and (max-width:600px){
+
+     .logo{
+          left: 40px;
+     }
+     .loginRight{
+          padding: 0px 40px;
+     }
+}
+
+@media screen and (max-width:400px){
+     .logo{
+          left: 20px;
+     }
+     .loginRight{
+          padding: 0px 20px;
+     }
 }
