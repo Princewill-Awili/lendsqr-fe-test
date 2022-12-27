@@ -1,9 +1,12 @@
-
+import { Routes, Route } from "react-router-dom";
+import Login from "./pages/Login/Login";
 
 function App() {
   return (
     <div className="App">
-     Hello World!
+      <Routes>
+        <Route path="/" exact element={<Login/>}/>
+      </Routes>
     </div>
   );
 }
