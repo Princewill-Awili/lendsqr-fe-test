@@ -6,9 +6,10 @@ export const StateContextProvider = ({children}) => {
 
      const [userEmail, setUserEmail] = useState('');
      const [userPassword, setUserPassword] = useState('');
+     const [loading, setLoading] = useState(false);
 
      return (
-          <states.Provider value={{userEmail, setUserEmail, userPassword, setUserPassword}}>
+          <states.Provider value={{userEmail, setUserEmail, userPassword, setUserPassword,loading, setLoading}}>
                {children}
           </states.Provider>
      )
