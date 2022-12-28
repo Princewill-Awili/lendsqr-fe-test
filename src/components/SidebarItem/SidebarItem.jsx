@@ -4,11 +4,16 @@ import './sidebarItem.css'
 
 const SidebarItem = ({icon,txt,arrow,type}) => {
 
-  const {activeSection, setActiveSection} = useContext(states);
+  const {activeSection, setActiveSection, setLoading} = useContext(states);
 
   const allowActive = () => {
      if(type !== 'head' && type !== 'dash' && type !== 'switch'){
+          setLoading(true);
           setActiveSection(txt);
+          setTimeout(()=>{
+               setLoading(false);
+          },500)
+          
      }else{
           return
      }
