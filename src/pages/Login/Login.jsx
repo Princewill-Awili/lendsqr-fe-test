@@ -39,7 +39,7 @@ const Login = () => {
                setTimeout(()=>{
                     setLoading(false);
                     navigate('/dashboard');
-               },2000);
+               },1000);
 
           }else{
                // Throw an Error to user

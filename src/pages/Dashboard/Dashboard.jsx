@@ -6,6 +6,7 @@ import userPic from '../../assets/images/userPic.svg'
 import ArrowDown from '../../assets/icons/arrowDown.svg'
 
 import Sidebar from '../../components/Sidebar/Sidebar'
+import Section from '../../components/Section/Section'
 
 const Dashboard = () => {
 
@@ -32,6 +33,7 @@ const Dashboard = () => {
         </div>
 
         <Sidebar/>
+        <Section/>
 
       </div>
 
