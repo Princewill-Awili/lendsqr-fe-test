@@ -35,6 +35,9 @@ import Clip from '../../assets/icons/clipboard.svg'
 import SidebarItem from '../../components/SidebarItem/SidebarItem'
 
 const Dashboard = () => {
+
+  
+
   return (
     <div className='dashboard'>
       <div className="topbar">
