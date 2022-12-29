@@ -1,6 +1,7 @@
 import './menu.css'
 import { useState, useContext } from 'react';
 import { states } from '../../utils/context';
+import { useNavigate } from 'react-router-dom';
 
 import ViewIcon from '../../assets/icons/viewIcon.svg'
 import BlacklistIcon from '../../assets/icons/blacklistIcon.svg'
@@ -12,9 +13,13 @@ const Menu = ({id, users}) => {
      const{currentRow, setCurrentRow, setPickedUser} = useContext(states)
      const dist = (id*60)-59 ;
 
+     const navigate = useNavigate();
+
      const viewDetails = () => {
           const selectedUser = users.find(user => user.id === id);
-          console.log(selectedUser);
+          setPickedUser(selectedUser);
+          localStorage.setItem('selectedUser',JSON.stringify(selectedUser))
+          navigate(`/dashboard/users/${id}`)
      }
 
   return (

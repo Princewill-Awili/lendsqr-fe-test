@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Login from "./pages/Login/Login";
 import Loader from "./components/Loader/Loader";
+import UserDetails from "./pages/UserDetails/UserDetails"
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
       <Routes>
         <Route path="/" exact element={<Login/>}/>
         <Route path="/dashboard" element={<Dashboard/>}/>
+        <Route path="/dashboard/users/:id" element={<UserDetails/>}/>
       </Routes>
     </div>
   );
