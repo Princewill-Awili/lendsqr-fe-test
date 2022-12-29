@@ -35,7 +35,11 @@ const UsersDataGrid = ({users}) => {
                                         <>
                                              <div style={cellStyle}>
                                                   <p className="status" 
-                                                       style={statusRender(status)}>
+                                                       style={statusRender(status)}
+                                                       onClick={()=> {
+                                                            setCurrentRow(id);
+                                                       }}
+                                                  >
                                                        {status}
                                                   </p>
                                                   <img 

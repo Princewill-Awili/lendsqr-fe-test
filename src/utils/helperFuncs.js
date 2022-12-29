@@ -12,7 +12,8 @@ export const statusRender = (status) => {
                background:"#F3FCF6",
                color:"#39c062",
                borderRadius:"100px",
-               padding:"5px 15px"
+               padding:"5px 15px",
+               cursor:"pointer"
           }
      }
      if(status === 'Inactive'){
@@ -20,7 +21,8 @@ export const statusRender = (status) => {
                background:"#F5F5F7",
                color:"#868EA3",
                borderRadius:"100px",
-               padding:"5px 15px"
+               padding:"5px 15px",
+               cursor:"pointer"
           }
      }
      if(status === 'Blacklisted'){
@@ -28,7 +30,8 @@ export const statusRender = (status) => {
                background:"#FCE6EB",
                color:"#ED587D",
                borderRadius:"100px",
-               padding:"5px 15px"
+               padding:"5px 15px",
+               cursor:"pointer"
           }
      }
      if(status === 'Pending'){
@@ -36,7 +39,8 @@ export const statusRender = (status) => {
                background:"#FDF7E5",
                color:"#F0C847",
                borderRadius:"100px",
-               padding:"5px 15px"
+               padding:"5px 15px",
+               cursor:"pointer"
           }
      }
 }
