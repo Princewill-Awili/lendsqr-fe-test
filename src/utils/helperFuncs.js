@@ -1,3 +1,11 @@
+export const statusRandomizer = () =>{
+     const states = ['Active', 'Inactive', 'Blacklisted', 'Pending'];
+     return states[Math.floor(Math.random()*states.length)];
+}
+
+
+
+
 export const statusRender = (status) => {
      if(status === 'Active'){
           return {
@@ -15,7 +23,7 @@ export const statusRender = (status) => {
                padding:"5px 15px"
           }
      }
-     if(status === 'Blacklist'){
+     if(status === 'Blacklisted'){
           return {
                background:"#FCE6EB",
                color:"#ED587D",
