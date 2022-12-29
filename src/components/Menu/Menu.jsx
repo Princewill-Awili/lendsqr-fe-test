@@ -6,10 +6,16 @@ import ViewIcon from '../../assets/icons/viewIcon.svg'
 import BlacklistIcon from '../../assets/icons/blacklistIcon.svg'
 import ActivateIcon from '../../assets/icons/activateIcon.svg'
 
-const Menu = ({id}) => {
+const Menu = ({id, users}) => {
      
-     const{currentRow, setCurrentRow} = useContext(states)
+     
+     const{currentRow, setCurrentRow, setPickedUser} = useContext(states)
      const dist = (id*60)-59 ;
+
+     const viewDetails = () => {
+          const selectedUser = users.find(user => user.id === id);
+          console.log(selectedUser);
+     }
 
   return (
      <div 
@@ -17,7 +23,7 @@ const Menu = ({id}) => {
           style={{top:`${dist}px`, display: currentRow === id ? "flex": "none"}}
           onClick={()=> setCurrentRow(null)}
      >
-          <div className="menuRow">
+          <div className="menuRow" onClick={viewDetails}>
                <img src={ViewIcon} alt="icon"/>
                <span>View Details</span>
           </div>

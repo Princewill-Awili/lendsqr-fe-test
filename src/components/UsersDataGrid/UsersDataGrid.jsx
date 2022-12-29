@@ -47,7 +47,7 @@ const UsersDataGrid = ({users}) => {
                                                        style={{cursor:"pointer"}}
                                                   />
                                              </div>
-                                             <Menu id={id}/>
+                                             <Menu id={id} users={users}/>
                                         </>
                                         
 
