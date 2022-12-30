@@ -4,3 +4,80 @@
      display: flex;
      position: relative;
 }
+
+.userInfo{
+     width: calc(100vw - 300px);
+     min-height: calc(1325px - 100px);
+     position: absolute;
+     top: 100px;
+     left: 300px;
+     display: flex;
+     flex-direction: column;
+     padding:60px;
+     background:#E5E5E5;
+}
+
+.userInfo>.back{
+     display: flex;
+     width: 100%;
+     height: 20px;
+     justify-content: flex-start;
+     gap: 5px;
+     color: #545F7D;
+     cursor: pointer;
+     margin-bottom: 30px;
+}
+
+.userInfo>.userActions{
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+}
+
+.userInfo>.userActions>h2{
+     font-weight: 500;
+     font-size: 24px;
+     color:#213F7D;
+}
+
+
+.userInfo>.userActions>.actionBtns{
+     width: 360px;
+     height: 40px;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     gap: 20px;
+}
+
+.userInfo>.userActions>.actionBtns>.actionBtn{
+     width: 170px;
+     height: 100%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     font-size: 14px;
+     font-weight: 600;
+     border-radius: 8px;
+     cursor: pointer;
+}
+
+.blacklistBtn{
+     color:#E4033B;
+     border: 1px solid #E4033B;
+}
+
+.blacklistBtn:hover{
+     background-color: #E4033B;
+     color: white;
+}
+
+.activateBtn{
+     color: #39CDCC;
+     border: 1px solid #39CDCC;
+}
+
+.activateBtn:hover{
+     background-color: #39CDCC;
+     color:white;
+}
