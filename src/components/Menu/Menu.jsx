@@ -1,5 +1,5 @@
 import './menu.css'
-import { useState, useContext } from 'react';
+import { useContext } from 'react';
 import { states } from '../../utils/context';
 import { useNavigate } from 'react-router-dom';
 

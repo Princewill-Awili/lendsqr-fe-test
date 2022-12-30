@@ -44,3 +44,8 @@ export const statusRender = (status) => {
           }
      }
 }
+
+export const randomBank = () => {
+     const banks = ['First Bank','Providus Bank', 'Kuda Bank','Zenith Bank', 'GTB Bank'];
+     return banks[Math.floor(Math.random()*banks.length)]
+}

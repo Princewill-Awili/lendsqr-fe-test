@@ -91,16 +91,113 @@
      flex-direction: column;
      padding: 30px 30px 0px 30px;
      background-color: white;
+     justify-content: space-between;
 }
 
 .quickInfo>.qiTop{
      width: 100%;
      height: 100px;
      display: flex;
+     align-items: center;
+     justify-content: flex-start;
 }
 
 .qiTop>img{
      border-radius: 50%;
      width: 100px;
      height: 100px;
+}
+
+.userAvatar{
+     margin-right: 20px;
+}
+
+.qiTop>.qiTopOne{
+     display: flex;
+     flex-direction: column;
+     width: 170px;
+     height: 80px;
+     align-items: left;
+     justify-content: center;
+     gap: 10px;
+     border-right: 1px solid #545F7D;
+}
+
+.qiName{
+     font-weight: 500;
+     font-size: 22px;
+     color:#213F7D
+}
+.qiId{
+     font-size: 14px;
+}
+
+.usersTier{
+     width: 130px;
+     height: 80px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     gap: 10px;
+     border-right: 1px solid #545F7D;
+}
+
+
+.acctDetails{
+     width: 250px;
+     height: 80px;
+     display: flex;
+     flex-direction: column;
+     padding-left: 30px;
+     border-right: none;
+     align-items: left;
+     justify-content: center;
+     gap: 10px;
+
+}
+
+.acctDetails>.acctBalance{
+     font-size: 22px;
+     font-weight: 500;
+     color: #213F7D;
+}
+
+.acctDetails>.acctMisc{
+     color:#213F7D;
+     font-size: 12px;
+     font-weight: 400;
+}
+
+.qiBottom{
+     width: 100%;
+     height: 40px;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+}
+
+.qiBottom>.qiBottomItem{
+     height: 100%;
+     width: calc(100%/6);
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     font-weight: 400px;
+     
+     cursor: pointer;
+}
+
+.qibActive{
+     color: #39CDCC;
+     border-bottom: 3px solid #39CDCC;
+
+}
+
+.mainInfo{
+     width: 100%;
+     min-height: 910px;
+     padding: 30px;
+     background-color: white;
+     margin-top: 30px;
 }

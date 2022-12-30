@@ -4,12 +4,12 @@ import { DataGrid } from '@mui/x-data-grid';
 import { statusRandomizer, statusRender } from '../../utils/helperFuncs';
 import MenuIcon from '../../assets/icons/dots.svg'
 import Menu from '../Menu/Menu';
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import { states } from '../../utils/context';
 
 const UsersDataGrid = ({users}) => {
 
-     const{currentRow, setCurrentRow} = useContext(states);
+     const{ setCurrentRow } = useContext(states);
 
      const cellStyle = {
           width:"100%",
