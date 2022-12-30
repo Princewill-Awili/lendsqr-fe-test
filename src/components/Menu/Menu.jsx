@@ -7,18 +7,28 @@ import ViewIcon from '../../assets/icons/viewIcon.svg'
 import BlacklistIcon from '../../assets/icons/blacklistIcon.svg'
 import ActivateIcon from '../../assets/icons/activateIcon.svg'
 
+import { fetchUserById } from '../../utils/fetchData';
+
 const Menu = ({id, users}) => {
      
      
-     const{currentRow, setCurrentRow, setPickedUser} = useContext(states)
+     const{currentRow, setCurrentRow, setLoading} = useContext(states)
      const dist = (id*60)-59 ;
 
      const navigate = useNavigate();
 
      const viewDetails = () => {
-          const selectedUser = users.find(user => user.id === id);
-          setPickedUser(selectedUser);
-          localStorage.setItem('selectedUser',JSON.stringify(selectedUser))
+          // const selectedUser = users.find(user => user.id === id);
+          // setPickedUser(selectedUser);
+          // localStorage.setItem('selectedUser',JSON.stringify(selectedUser))
+          fetchUserById(id);
+          setLoading(true);
+
+          setTimeout(()=>{
+               setLoading(false);
+               navigate(`/dashboard/users/${id}`);
+          },1000)
+
           navigate(`/dashboard/users/${id}`)
      }
 

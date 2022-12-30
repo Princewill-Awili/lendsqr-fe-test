@@ -3,9 +3,18 @@ import './userdetails.css'
 import Topbar from '../../components/Topbar/Topbar'
 import Sidebar from '../../components/Sidebar/Sidebar'
 import backIcon from '../../assets/icons/backArrow.svg'
+import avatarIcon from '../../assets/icons/avatar.svg'
+import { useEffect, useState } from 'react'
 
 
 const UserDetails = () => {
+
+  const [selectedUser,setSelectedUser] = useState({});
+
+  useEffect(()=>{
+    setSelectedUser(JSON.parse(localStorage.getItem('selectedUser')));
+  },[])
+
   return (
     <div className='userDetails'>
       <Topbar/>
@@ -25,7 +34,14 @@ const UserDetails = () => {
           </div>
         </div>
 
-        
+        <div className="quickInfo">
+          <div className="qiTop">
+            <img src={selectedUser ? selectedUser?.profile?.avatar : (<img src={avatarIcon} alt="icon"/>)} alt="icon"/>
+
+          </div>
+        </div>
+
+
       </div>
     </div>
   )
