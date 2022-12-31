@@ -49,3 +49,8 @@ export const randomBank = () => {
      const banks = ['First Bank','Providus Bank', 'Kuda Bank','Zenith Bank', 'GTB Bank'];
      return banks[Math.floor(Math.random()*banks.length)]
 }
+
+export const maritalStatus = () => {
+     const status = ['Married', 'Not Married'];
+     return status[Math.floor(Math.random()*2)]
+ }

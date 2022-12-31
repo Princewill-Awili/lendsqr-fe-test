@@ -6,10 +6,12 @@ import backIcon from '../../assets/icons/backArrow.svg'
 import avatarIcon from '../../assets/icons/avatar.svg'
 import starFill from '../../assets/icons/starFill.svg'
 import starOutline from '../../assets/icons/starOutline.svg'
-import { randomBank } from '../../utils/helperFuncs'
+import { randomBank, maritalStatus } from '../../utils/helperFuncs'
 
 import { useNavigate } from 'react-router-dom'
 import { useEffect, useState } from 'react'
+
+import Subsection from '../../components/SubSection/Subsection'
 
 
 const UserDetails = () => {
@@ -28,7 +30,9 @@ const UserDetails = () => {
       <Sidebar/>
       <div className="userInfo">
 
-        <div className="back" onClick={()=> navigate('/dashboard')}>
+        <div className="back" onClick={()=> {
+          navigate('/dashboard')
+        }}>
           <img src={backIcon} alt="icon"/>
           <span className="backTxt">Back to Users</span>
         </div>
@@ -85,7 +89,55 @@ const UserDetails = () => {
         </div>
 
         <div className="mainInfo">
-          
+          <Subsection 
+              subsectionTitle="Personal Information" 
+              content={[
+                    {title:"Full name", value:`${selectedUser?.profile?.firstName} ${selectedUser?.profile?.lastName}`},
+                    {title:"Phone Number", value:selectedUser?.profile?.phoneNumber},
+                    {title: "Email Address", value: selectedUser?.email},
+                    {title:"BVN", value:selectedUser?.profile?.bvn},
+                    {title: "Gender", value: selectedUser?.profile?.gender},
+                    {title: "Marital Satus", value: maritalStatus()},
+                    {title:"Children" , value:"None"},
+                    {title:"Type of Residence", value:"Apartment Block"}
+                      ]}
+          />
+          <Subsection 
+            subsectionTitle="Education and Employment"
+            content={
+                [
+                    {title:"Level of Education", value:selectedUser?.education?.level },
+                    {title:"Sector of employment", value: selectedUser?.education?.sector},
+                    {title:"Duration of Employment", value:selectedUser?.education?.duration},
+                    {title:"Office Email", value: selectedUser?.education?.officeEmail},
+                    {title:"Monthly Income",value: `₦${selectedUser?.education?.monthlyIncome[1]} - ₦${selectedUser?.education?.monthlyIncome[0]}`},
+                    {title:"loan Repayment" , value:selectedUser?.education?.loanRepayment}
+                ]
+            }
+          />
+          <Subsection
+            subsectionTitle="Socials"
+            content={
+                [
+                    {title:"Twitter", value:selectedUser?.socials?.twitter},
+                    {title:"Facebook", value:selectedUser?.socials?.facebook},
+                    {title:"Instagram", value:selectedUser?.socials?.instagram}
+            ]
+            }
+          />
+
+          <Subsection
+              subsectionTitle="Gurantor"
+              content={
+                  [
+                      {title:"Full name", value:`${selectedUser?.guarantor?.firstName} ${selectedUser?.guarantor?.lastName}`},
+                      {title:"Phone Number", value:selectedUser?.guarantor?.phoneNumber},
+                      {title:"Email Address", value:"debby@gmail.com"},
+                      {title:"Relationship", value:'Sister'}
+              ]
+              }
+          />
+
         </div>
 
 
