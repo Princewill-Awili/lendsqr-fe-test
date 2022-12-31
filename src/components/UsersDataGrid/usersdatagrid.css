@@ -3,6 +3,8 @@
      height: 700px;
      background-color: white;
      z-index: 777;
+     display: flex;
+     position: relative;
 }
 
 .MuiDataGrid-virtualScroller::-webkit-scrollbar{

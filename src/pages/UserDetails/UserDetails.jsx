@@ -16,7 +16,7 @@ import Subsection from '../../components/SubSection/Subsection'
 
 const UserDetails = () => {
 
-  const [activeUserMenu, setActiveUserMenu] = useState('general');
+  const [activeUserMenu] = useState('general');
   const [selectedUser,setSelectedUser] = useState({});
   const navigate = useNavigate();
 

@@ -4,6 +4,7 @@ import { DataGrid } from '@mui/x-data-grid';
 import { statusRandomizer, statusRender } from '../../utils/helperFuncs';
 import MenuIcon from '../../assets/icons/dots.svg'
 import Menu from '../Menu/Menu';
+import SortingForm from '../SortingForm/SortingForm';
 import { useContext } from 'react';
 import { states } from '../../utils/context';
 
@@ -73,6 +74,7 @@ const UsersDataGrid = ({users}) => {
 
   return (
     <div className='datagrid'>
+     <SortingForm/>
      <DataGrid rows={rows} columns={columns}/>
     </div>
   )
