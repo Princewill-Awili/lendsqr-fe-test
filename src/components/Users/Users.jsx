@@ -6,16 +6,32 @@ import hlUsers from '../../assets/icons/hlUsers.svg'
 import hlActive from '../../assets/icons/hlActive.svg'
 import hlLoans from '../../assets/icons/hlLoans.svg'
 import hlSavings from '../../assets/icons/hlSavings.svg'
-import { useState,useEffect } from 'react'
+import { useEffect, useContext } from 'react'
+import { states } from '../../utils/context'
+
+import { fetchData } from '../../utils/fetchData'
 
 
 
 const Users = () => {
 
-     const [allUsers, setAllUsers] = useState([]);
+     const {allUsers, setAllUsers} = useContext(states);
 
      useEffect(()=>{
-          setAllUsers(JSON.parse(localStorage.getItem('users')));
+          const storedData = JSON.parse(localStorage.getItem('users'));
+          
+          const loadData = async () =>{
+               if(storedData){
+                    setAllUsers(storedData);
+               }
+               else{
+                    fetchData();
+                    const refetchedData = await JSON.parse(localStorage.getItem('users'));
+                    setAllUsers(refetchedData);
+               }
+          }
+
+          loadData();
      },[])
 
      const usersWithLoans = allUsers.filter(user =>JSON.parse(user.education.loanRepayment) > 0)

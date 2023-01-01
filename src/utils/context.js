@@ -11,9 +11,10 @@ export const StateContextProvider = ({children}) => {
 
      const [currentRow, setCurrentRow] = useState(null);
      const [pickedUser, setPickedUser] = useState({});
+     const [allUsers, setAllUsers] = useState([]);
 
      return (
-          <states.Provider value={{userEmail, setUserEmail, userPassword, setUserPassword,loading, setLoading, activeSection, setActiveSection, currentRow, setCurrentRow, pickedUser, setPickedUser}}>
+          <states.Provider value={{allUsers,setAllUsers, userEmail, setUserEmail, userPassword, setUserPassword,loading, setLoading, activeSection, setActiveSection, currentRow, setCurrentRow, pickedUser, setPickedUser}}>
                {children}
           </states.Provider>
      )

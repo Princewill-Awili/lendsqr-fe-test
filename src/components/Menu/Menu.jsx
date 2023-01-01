@@ -13,7 +13,7 @@ const Menu = ({id, users}) => {
      
      
      const{currentRow, setCurrentRow, setLoading} = useContext(states)
-     const dist = (id*60)-59 ;
+     const dist = (id*60);
 
      const navigate = useNavigate();
 

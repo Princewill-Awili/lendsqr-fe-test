@@ -13,7 +13,10 @@ export const statusRender = (status) => {
                color:"#39c062",
                borderRadius:"100px",
                padding:"5px 15px",
-               cursor:"pointer"
+               cursor:"pointer",
+               fontFamily:"Work Sans",
+               fontSize:"14px",
+               fontWeight:"400"
           }
      }
      if(status === 'Inactive'){
@@ -22,7 +25,10 @@ export const statusRender = (status) => {
                color:"#868EA3",
                borderRadius:"100px",
                padding:"5px 15px",
-               cursor:"pointer"
+               cursor:"pointer",
+               fontFamily:"Work Sans",
+               fontSize:"14px",
+               fontWeight:"400"
           }
      }
      if(status === 'Blacklisted'){
@@ -31,7 +37,10 @@ export const statusRender = (status) => {
                color:"#ED587D",
                borderRadius:"100px",
                padding:"5px 15px",
-               cursor:"pointer"
+               cursor:"pointer",
+               fontFamily:"Work Sans",
+               fontSize:"14px",
+               fontWeight:"400"
           }
      }
      if(status === 'Pending'){
@@ -40,7 +49,10 @@ export const statusRender = (status) => {
                color:"#F0C847",
                borderRadius:"100px",
                padding:"5px 15px",
-               cursor:"pointer"
+               cursor:"pointer",
+               fontFamily:"Work Sans",
+               fontSize:"14px",
+               fontWeight:"400"
           }
      }
 }

@@ -15,3 +15,27 @@
 .name-column--cell{
      overflow: visible;
 }
+
+.header{
+     width: 100%;
+     height: 100%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     gap: 10px;
+     
+}
+
+.headerTxt{
+     font-family: 'Work Sans';
+     color: #545F7D;
+     font-weight: 600;
+     font-size: 12px;
+}
+
+
+.MuiDataGrid-cellContent{
+     font-size: 14px;
+     font-weight: 400;
+     font-family: 'Work Sans';
+}
