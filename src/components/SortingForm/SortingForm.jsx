@@ -9,7 +9,9 @@ const SortingForm = ({users}) => {
   const {setAllUsers} = useContext(states);
 
   const [orgName, setOrgName] = useState('');
-  const [userName, setUserName]
+  const [userName, setUserName] = useState('');
+  const [email, setEmail] = useState('');
+  const [date, setDate] = useState('');
 
 
   const handleFilter = () => {
