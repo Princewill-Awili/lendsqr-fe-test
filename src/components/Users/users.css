@@ -9,7 +9,40 @@
      width: 100%;
      height: 160px;
      display: flex;
+     flex-wrap: wrap;
      justify-content: space-between;
-     margin-bottom: 40px;
 }
 
+@media screen and (max-width:1040px) {
+     .userHighlights{
+          height: 320px;
+          margin-bottom: 40px;
+     }
+}
+
+@media screen and (max-width:920px) {
+     .userHighlights{
+          height: 320px;
+          margin-bottom: 40px;
+     }
+}
+
+@media screen and (max-width:800px) {
+     .userHighlights{
+          height: 320px;
+     }
+}
+
+@media screen and (max-width:715px) {
+     .userHighlights{
+          justify-content: center;
+          gap: 20px;
+          margin-bottom: 20px;
+     }
+}
+
+@media screen and (max-width:460px) {
+     .userHighlights{
+          height: 600px;
+     }
+}

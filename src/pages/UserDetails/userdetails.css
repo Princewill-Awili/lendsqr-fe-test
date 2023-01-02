@@ -1,6 +1,6 @@
 .userDetails{
-     width: 100vw;
-     height: 100vh;
+     width: 100%;
+     height: 100%;
      display: flex;
      position: relative;
 }
@@ -31,8 +31,10 @@
 .userInfo>.userActions{
      display: flex;
      align-items: center;
+     flex-wrap: wrap;
      justify-content: space-between;
      margin-bottom: 50px;
+     gap: 20px;
 }
 
 .userInfo>.userActions>h2{
@@ -45,6 +47,7 @@
 .userInfo>.userActions>.actionBtns{
      width: 360px;
      height: 40px;
+     flex-wrap: wrap;
      display: flex;
      justify-content: space-between;
      align-items: center;
@@ -175,6 +178,13 @@
      display: flex;
      align-items: center;
      justify-content: space-between;
+     background-color: white;
+}
+
+.qiMenuIcon{
+     font-size: 32px;
+     color: #39CDCC;
+     display: none;
 }
 
 .qiBottom>.qiBottomItem{
@@ -202,4 +212,133 @@
      margin-top: 30px;
      display: flex;
      flex-direction: column;
+}
+
+
+@media screen and (max-width:1400px) {
+     .userInfo{
+          padding: 60px  10px 60px 10px;
+          left: 250px;
+     }
+}
+@media screen and (max-width:1300px) {
+     .userInfo{
+          width: calc(100% - 200px);
+          padding: 60px  10px 60px 10px;
+          left: 200px;
+     }
+}
+
+@media screen and (max-width:1200px) {
+     .qiBottomItem{
+          font-size: 14px;
+     }
+}
+
+@media screen and (max-width:1070px) {
+     .qiBottomItem{
+          font-size: 12px;
+     }
+}
+
+@media screen and (max-width:980px) {
+     .quickInfo{
+          min-height: 380px;
+     }
+     .qiBottom{
+          flex-direction: column;
+          height: 360px;
+          align-items: left;
+          margin-top: 40px;
+          
+     }
+
+     .qiBottom>.qiBottomItem{
+          width: 100%;
+          align-items: left;
+          justify-content: flex-start;
+          text-align: left;
+          padding: 5px 0px;
+     }
+
+     .qiMenuIcon{
+          display: block;
+
+     }
+}
+
+@media screen and (max-width:800px) {
+     .userInfo{
+          left:100px;
+          min-width: calc(100% - 100px);
+     }
+
+     .userActions> h2{
+          font-size: 18px;
+          margin-bottom: 10px;
+     }
+
+     .userActions>.actionBtns{
+          justify-content: flex-start;
+          gap: 20px;
+          
+     }
+
+     .userInfo>.userActions>.actionBtns>.actionBtn{
+          width: 120px;
+          font-size: 12px;
+     }
+
+     
+}
+@media screen and (max-width:730px) {
+     .quickInfo{
+          min-height:740px ;
+     }
+     .qiTop{
+          flex-direction: column;
+          height: 450px;
+          gap: 10px;
+          margin-bottom: 60px;
+     }
+
+     .qiBottom{
+          margin-top: 60px;
+     }
+     .userAvatar{
+          margin-bottom: 10px;
+     }
+     .qiTop>.qiTopOne{
+          border: none;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 20px;
+          width: 100%;
+     }
+
+     .qiName{
+          font-size: 20px;
+     }
+     .qiTop>.usersTier{
+          border: none;
+     }
+
+     .acctDetails{
+          width: 100%;
+          
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+     }
+}
+@media screen and (max-width:500px) {
+     .actionBtns{
+          margin-bottom: 20px;
+     }
+    .userActions{
+     height: 150px;
+    }
+    .qiName{
+     font-size: 18px;
+    }
 }

@@ -1,5 +1,5 @@
 import './menu.css'
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import { states } from '../../utils/context';
 import { useNavigate } from 'react-router-dom';
 
@@ -12,25 +12,29 @@ import { fetchUserById } from '../../utils/fetchData';
 const Menu = ({id, users}) => {
      
      
-     const{currentRow, setCurrentRow, setLoading} = useContext(states)
+     const{currentRow, setCurrentRow, setLoading,pickedUser, setPickedUser} = useContext(states)
      const dist = (id*60);
 
      const navigate = useNavigate();
 
      const viewDetails = () => {
-          // const selectedUser = users.find(user => user.id === id);
-          // setPickedUser(selectedUser);
-          // localStorage.setItem('selectedUser',JSON.stringify(selectedUser))
           fetchUserById(id);
+          const selectedUser = users.find(user => user.id === id);
+          setPickedUser(selectedUser);
+          // localStorage.setItem('selectedUser',JSON.stringify(selectedUser))
+          
           setLoading(true);
 
           setTimeout(()=>{
                setLoading(false);
                navigate(`/dashboard/users/${id}`);
-          },1000)
-
-          navigate(`/dashboard/users/${id}`)
+          },1000);
      }
+
+     useEffect(()=>{
+          localStorage.setItem('selectedUser',JSON.stringify(pickedUser))
+     },[pickedUser]);
+
 
   return (
      <div 

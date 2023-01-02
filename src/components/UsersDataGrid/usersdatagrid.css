@@ -5,6 +5,7 @@
      z-index: 777;
      display: flex;
      position: relative;
+     margin-top: 40px;
 }
 
 .MuiDataGrid-virtualScroller::-webkit-scrollbar{

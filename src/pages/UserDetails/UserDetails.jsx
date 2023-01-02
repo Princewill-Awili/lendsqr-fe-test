@@ -6,6 +6,7 @@ import backIcon from '../../assets/icons/backArrow.svg'
 import avatarIcon from '../../assets/icons/avatar.svg'
 import starFill from '../../assets/icons/starFill.svg'
 import starOutline from '../../assets/icons/starOutline.svg'
+
 import { randomBank, maritalStatus } from '../../utils/helperFuncs'
 
 import { useNavigate } from 'react-router-dom'
@@ -74,7 +75,7 @@ const UserDetails = () => {
 
           </div>
 
-          <div className="qiBottom">
+          <div className="qiBottom">        
             <div 
               className={activeUserMenu === 'general'? "qiBottomItem qibActive": "qiBottomItem"}
             >
