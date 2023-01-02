@@ -38,9 +38,13 @@
           font-size: 14px;
      }
 }
+@media screen and (max-width:1400px){
+     .sbItem{
+          padding: 0px 10px;
+     }
+}
 
-
-@media screen and (max-width:600px){
+@media screen and (max-width:800px){
      .sbItem{
           padding: 0px;
           align-items: center;

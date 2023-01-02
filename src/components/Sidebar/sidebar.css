@@ -26,13 +26,9 @@
      }
 }
 
-@media screen  and (max-width:1200px){
-     .sidebar{
-          width: 150px;
-     }
-}
 
-@media screen  and (max-width:600px){
+
+@media screen  and (max-width:800px){
      .sidebar{
           width: 100px;
      }

@@ -31,7 +31,7 @@
      }
 }
 
-@media screen  and (max-width:600px){
+@media screen  and (max-width:800px){
      .section{
           width: calc(100% - 100px );
           left:100px;
