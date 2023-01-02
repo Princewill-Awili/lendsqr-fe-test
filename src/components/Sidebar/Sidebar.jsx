@@ -1,4 +1,4 @@
-import './sidebar.css'
+import './sidebar.scss'
 import { states } from '../../utils/context'
 import { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'

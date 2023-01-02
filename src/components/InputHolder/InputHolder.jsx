@@ -1,4 +1,4 @@
-import './inputholder.css'
+import './inputholder.scss'
 
 const InputHolder = ({users,inputType,label,placeholder}) => {
   return (

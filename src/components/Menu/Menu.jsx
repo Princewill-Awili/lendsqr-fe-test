@@ -1,4 +1,4 @@
-import './menu.css'
+import './menu.scss'
 import { useContext, useEffect } from 'react';
 import { states } from '../../utils/context';
 import { useNavigate } from 'react-router-dom';

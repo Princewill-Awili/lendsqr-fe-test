@@ -1,6 +1,6 @@
 import { useContext } from 'react'
 import { states } from '../../utils/context'
-import './section.css'
+import './section.scss'
 import Users from '../Users/Users'
 
 const Section = () => {

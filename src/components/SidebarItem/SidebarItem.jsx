@@ -1,6 +1,6 @@
 import { useContext } from 'react'
 import { states } from '../../utils/context'
-import './sidebarItem.css'
+import './sidebarItem.scss'
 
 const SidebarItem = ({icon,txt,arrow,type}) => {
 
