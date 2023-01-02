@@ -11,10 +11,10 @@ In the project directory, you can run:
 This is an interactive admin dashboard template to handle Lendsqr users information. 
 It enables the admin to filter through lists of users.
 
-##GENERAL USAGE
+## GENERAL USAGE
 
 
-###LOGGING IN
+### LOGGING IN
 Log into the app using any email and password of your choice 
 PLEASE NOTE: Email and Password fields must not be left blank.
 
