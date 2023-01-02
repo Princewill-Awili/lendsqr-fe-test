@@ -1,4 +1,6 @@
+![Lendsqr logo](./src/assets/images/lendsqrLg.png)
 # Lendsqr Admin Dashboard
+
 
 This project was created using React, CSS and SASS.
 
