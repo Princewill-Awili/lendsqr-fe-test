@@ -28,9 +28,9 @@ Information such as
 - Date joined
 - Status
 
-Clicking on any of the column headers or filter icon ![filter icon](./src/assets/arrowDown.png) opens up a filter form that filters users by the above mentioned parameters.
+Clicking on any of the column headers or filter icon ![filter icon](./src/assets/icons/filterIcon.svg) opens up a filter form that filters users by the above mentioned parameters.
 PLEASE NOTE: The filter form is not currently functional.
-Clicking on the dotted status column of a user or the icon ![menu icon](./src/assets/more.svg) opens up a pop up menu. Clicking on the view 
+Clicking on the dotted status column of a user or the icon ![menu icon](./src/assets/icons/dots.svg) opens up a pop up menu. Clicking on the view 
 details tab will take you to the User details page of that particular user.
 
 
