@@ -1,4 +1,7 @@
 import './sidebar.css'
+import { states } from '../../utils/context'
+import { useContext } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 import SidebarItem from '../SidebarItem/SidebarItem'
 
@@ -26,8 +29,19 @@ import Prefs from '../../assets/icons/sliders.svg'
 import Fees from '../../assets/icons/fees.svg'
 import Clip from '../../assets/icons/clipboard.svg'
 
+import SignOutIcon from '../../assets/icons/signOutIcon.svg'
+
 
 const Sidebar = () => {
+
+  const {isLoggedIn, setIsLoggedIn} = useContext(states);
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    setIsLoggedIn(false);
+    navigate('/');
+  }
+
   return (
     <div className='sidebar'>
      <SidebarItem icon={Briefcase} txt="Switch Organization" arrow={Arrow} type='switch'/>
@@ -58,6 +72,11 @@ const Sidebar = () => {
         <SidebarItem icon={Prefs} txt='Preferences'/>
         <SidebarItem icon={Fees} txt="Fees and Prices"/>
         <SidebarItem icon={Clip} txt="Audit Logs"/>
+
+        <div className="logoutWrapper">
+          <SidebarItem icon={SignOutIcon} txt="Logout" onClick={handleLogout}/>
+          <span className="version">v1.2.0</span>
+        </div>
     </div>
   )
 }

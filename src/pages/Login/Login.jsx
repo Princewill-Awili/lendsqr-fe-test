@@ -12,7 +12,7 @@ import { useNavigate } from 'react-router-dom'
 
 const Login = () => {
 
-     const {userEmail, userPassword, setLoading} = useContext(states);
+     const {userEmail, userPassword, setLoading, setIsLoggedIn} = useContext(states);
      const navigate = useNavigate();
      const [error, setError] = useState(false);
 
@@ -27,14 +27,16 @@ const Login = () => {
 
      const handleLogin = () => {
           if(userEmail.length > 0 && userPassword.length > 0){
-               // 1. Show loading state.
+               //1. Set Login State to True
+               setIsLoggedIn(true)
+               // 2. Show loading state.
                setLoading(true);
 
-               // 2.Fetch Data from API and place in Local Storage.
+               // 3.Fetch Data from API and place in Local Storage.
                fetchData();
 
-               //3. Stop loading state.
-               // 4. Navigate to Dashboard.
+               //4. Stop loading state.
+               // 5. Navigate to Dashboard.
 
                setTimeout(()=>{
                     setLoading(false);

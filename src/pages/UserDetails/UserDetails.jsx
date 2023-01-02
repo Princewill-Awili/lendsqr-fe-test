@@ -139,6 +139,19 @@ const UserDetails = () => {
               }
           />
 
+        <Subsection
+              subsectionTitle=""
+              last
+              content={
+                  [
+                      {title:"Full name", value:`${selectedUser?.guarantor?.firstName} ${selectedUser?.guarantor?.lastName}`},
+                      {title:"Phone Number", value:selectedUser?.guarantor?.phoneNumber},
+                      {title:"Email Address", value:"debby@gmail.com"},
+                      {title:"Relationship", value:'Sister'}
+              ]
+              }
+          />
+
         </div>
 
 

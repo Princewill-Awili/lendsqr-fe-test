@@ -1,8 +1,8 @@
 import './subsection.css'
 
-const Subsection = ({subsectionTitle,content}) => {
+const Subsection = ({subsectionTitle,content,last}) => {
   return (
-    <div className='subsection'>
+    <div className='subsection' style={{borderBottom: last ? "none":""}}>
         <span className='subsectionTitle'>{subsectionTitle}</span>
         <div className="subsectionContainer">
             {

@@ -14,15 +14,38 @@
      margin-bottom: 50px;
 }
 
+.logoutWrapper{
+     width: 100%;
+     border-top: 1px solid #213F7D;
+     margin-top: 70px;
+     padding-top: 20px;
+     display: flex;
+     flex-direction: column;
+     gap: 40px;
+}
+
+.version{
+     font-size: 12px;
+     color:#213F7D;
+     padding-left: 50px;
+     display: flex;
+   }
+
 @media screen  and (max-width:1400px){
      .sidebar{
           width: 250px;
+     }
+     .version{
+          padding: 20px;
      }
 }
 
 @media screen  and (max-width:1300px){
      .sidebar{
           width: 200px;
+     }
+     .version{
+          padding-left: 10px;
      }
 }
 
@@ -31,6 +54,10 @@
 @media screen  and (max-width:800px){
      .sidebar{
           width: 100px;
+     }
+     .version{
+          align-items: center;
+          justify-content: center;
      }
 }
 

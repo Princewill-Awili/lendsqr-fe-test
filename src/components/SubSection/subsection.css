@@ -54,3 +54,12 @@
       line-height: 19px;
       color: #545F7D;
   }
+
+  
+
+
+  @media screen and (max-width:500px) {
+    .tileValue{
+        font-size: 14px;
+    }
+  }
