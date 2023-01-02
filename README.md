@@ -36,5 +36,5 @@ Clicking on the dotted icon in the status column of a user or the icon ![menu ic
 details option will take you to the User details page of that particular user.
 
 
-###USER DETAILS PAGE
+### USER DETAILS PAGE
 This page displays all the necessary information about the user. 
