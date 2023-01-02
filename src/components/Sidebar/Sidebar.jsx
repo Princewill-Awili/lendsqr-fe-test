@@ -34,12 +34,20 @@ import SignOutIcon from '../../assets/icons/signOutIcon.svg'
 
 const Sidebar = () => {
 
-  const {isLoggedIn, setIsLoggedIn} = useContext(states);
+  const {setLoading, setIsLoggedIn} = useContext(states);
   const navigate = useNavigate();
 
   const handleLogout = () => {
+    setLoading(true);
     setIsLoggedIn(false);
-    navigate('/');
+    localStorage.setItem('isLoggedIn','false');
+
+    setTimeout(()=>{
+      setLoading(false);
+      navigate('/');
+    },1000)
+    
+    
   }
 
   return (
@@ -74,7 +82,10 @@ const Sidebar = () => {
         <SidebarItem icon={Clip} txt="Audit Logs"/>
 
         <div className="logoutWrapper">
-          <SidebarItem icon={SignOutIcon} txt="Logout" onClick={handleLogout}/>
+          <div className="logout" onClick={handleLogout}>
+            <img src={SignOutIcon} alt="icon"/>
+            <span className="logoutTxt">Logout</span>
+          </div>
           <span className="version">v1.2.0</span>
         </div>
     </div>

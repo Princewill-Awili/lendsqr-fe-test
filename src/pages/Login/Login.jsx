@@ -27,8 +27,9 @@ const Login = () => {
 
      const handleLogin = () => {
           if(userEmail.length > 0 && userPassword.length > 0){
-               //1. Set Login State to True
-               setIsLoggedIn(true)
+               //1. Set Login State to True and store in localStorage
+               setIsLoggedIn(true);
+               localStorage.setItem('isLoggedIn','true')
                // 2. Show loading state.
                setLoading(true);
 
