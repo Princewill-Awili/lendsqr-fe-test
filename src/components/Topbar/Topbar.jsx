@@ -2,7 +2,7 @@ import './topbar.css'
 import smallLogo from '../../assets/images/logo.svg'
 import searchIcon from '../../assets/icons/SearchIcon.svg'
 import {MdOutlineNotifications as NotificationIcon} from 'react-icons/md'
-import userPic from '../../assets/images/userPic.svg'
+import userPic from '../../assets/images/userPic.jpg'
 import ArrowDown from '../../assets/icons/arrowDown.svg'
 
 
