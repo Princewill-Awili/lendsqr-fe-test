@@ -13,10 +13,8 @@ import { states } from '../../utils/context';
 
 const UsersDataGrid = ({users}) => {
 
-    
      const{ setCurrentRow } = useContext(states);
      const [showSortingForm, setShowSortingForm] = useState(false);
-
 
      const cellStyle = {
           width:"100%",
