@@ -1,4 +1,4 @@
-import './highlight.css'
+import './highlight.scss'
 
 const Highlight = ({icon,num,txt, color}) => {
   return (

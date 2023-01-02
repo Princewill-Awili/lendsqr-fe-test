@@ -1,5 +1,5 @@
 import { useState, useContext } from 'react'
-import './input.css'
+import './input.scss'
 import { states } from '../../utils/context'
 
 const Input = ({type,placeholder}) => {
