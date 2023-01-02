@@ -16,3 +16,25 @@
      color: #213F7D;
      margin-bottom: 40px;
 }
+
+@media screen  and (max-width:1400px){
+     .section{
+          left: 250px;
+     }
+
+}
+
+@media screen  and (max-width:1300px){
+     .section{
+          left: 200px;
+          width: calc(100% - 200px);
+     }
+}
+
+@media screen  and (max-width:600px){
+     .section{
+          width: calc(100% - 100px );
+          left:100px;
+          padding: 10px;
+     }
+}
