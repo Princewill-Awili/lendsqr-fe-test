@@ -18,8 +18,8 @@ function App() {
       {loading && (<Loader/>)}
       <Routes>
         <Route path="/" exact element={isLoggedIn ? (<Navigate replace to={'/dashboard'}/>):(<Login/>)}/>
-        <Route path="/dashboard" element={isLoggedIn ? (<Dashboard/>) : (<Navigate to={'/'}/>)}/>
-        <Route path="/dashboard/users/:id" element={isLoggedIn? (<UserDetails/>) : (<Navigate to={'/'}/>)}/>
+        <Route path="/dashboard" element={<Dashboard/>}/>
+        <Route path="/dashboard/users/:id" element={<UserDetails/>}/>
       </Routes>
     </div>
   );

@@ -16,10 +16,13 @@ const Login = () => {
      const navigate = useNavigate();
      const [error, setError] = useState(false);
 
+     const {setAllUsers} = useContext(states);
+
      useEffect(()=>{
           const storedUsers = JSON.parse(localStorage.getItem('users'));
           if(storedUsers){
-               console.log('Users Already Available!')
+               console.log('Users Already Available!');
+               setAllUsers(storedUsers);
           }else{
                console.log('Log in!')
           }
@@ -36,6 +39,7 @@ const Login = () => {
                localStorage.setItem('isLoggedIn','true');
                // 4. Navigate to Dashboard.
                if(JSON.parse(localStorage.getItem('users'))){
+                    setAllUsers(JSON.parse(localStorage.getItem('users')));
                     setLoading(false);
                     navigate('/dashboard');
                }
