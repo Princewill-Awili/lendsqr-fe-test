@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useContext} from "react";
 import { states } from "./utils/context";
 import { Routes, Route, Navigate } from "react-router-dom";
 import Dashboard from "./pages/Dashboard/Dashboard";
@@ -9,7 +9,7 @@ import UserDetails from "./pages/UserDetails/UserDetails"
 
 function App() {
 
-  const { loading,isLoggedIn, setIsLoggedIn } = useContext(states);
+  const { loading,isLoggedIn } = useContext(states);
 
   
 
