@@ -11,7 +11,7 @@ export const StateContextProvider = ({children}) => {
 
      const [currentRow, setCurrentRow] = useState(null);
      const [pickedUser, setPickedUser] = useState({});
-     const [allUsers, setAllUsers] = useState([]);
+     const [allUsers, setAllUsers] = useState(JSON.parse(localStorage.getItem('users')));
 
      return (
           <states.Provider value={{isLoggedIn, setIsLoggedIn,allUsers,setAllUsers, userEmail, setUserEmail, userPassword, setUserPassword,loading, setLoading, activeSection, setActiveSection, currentRow, setCurrentRow, pickedUser, setPickedUser}}>

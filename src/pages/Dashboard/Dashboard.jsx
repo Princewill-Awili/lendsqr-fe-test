@@ -15,7 +15,7 @@ const Dashboard = () => {
 
   useEffect(()=>{
     const loginStatus = JSON.parse(localStorage.getItem('isLoggedIn'));
-    setIsLoggedIn(loginStatus)
+    setIsLoggedIn(loginStatus);
   },[])
   
 

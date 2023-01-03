@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { states } from "./utils/context";
 import { Routes, Route, Navigate } from "react-router-dom";
 import Dashboard from "./pages/Dashboard/Dashboard";
@@ -9,15 +9,17 @@ import UserDetails from "./pages/UserDetails/UserDetails"
 
 function App() {
 
-  const { loading } = useContext(states);
+  const { loading,isLoggedIn, setIsLoggedIn } = useContext(states);
+
+  
 
   return (
     <div className="App">
       {loading && (<Loader/>)}
       <Routes>
-        <Route path="/" exact element={<Login/>}/>
-        <Route path="/dashboard" element={<Dashboard/>}/>
-        <Route path="/dashboard/users/:id" element={<UserDetails/>}/>
+        <Route path="/" exact element={isLoggedIn ? (<Navigate replace to={'/dashboard'}/>):(<Login/>)}/>
+        <Route path="/dashboard" element={isLoggedIn ? (<Dashboard/>) : (<Navigate to={'/'}/>)}/>
+        <Route path="/dashboard/users/:id" element={isLoggedIn? (<UserDetails/>) : (<Navigate to={'/'}/>)}/>
       </Routes>
     </div>
   );

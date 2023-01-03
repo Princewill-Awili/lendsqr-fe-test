@@ -25,24 +25,21 @@ const Login = () => {
           }
      },[]);
 
-     const handleLogin = () => {
+     const handleLogin = async () => {
           if(userEmail.length > 0 && userPassword.length > 0){
-               //1. Set Login State to True and store in localStorage
-               setIsLoggedIn(true);
-               localStorage.setItem('isLoggedIn','true')
-               // 2. Show loading state.
+               // 1. Show loading state.
                setLoading(true);
-
-               // 3.Fetch Data from API and place in Local Storage.
-               fetchData();
-
-               //4. Stop loading state.
-               // 5. Navigate to Dashboard.
-
-               setTimeout(()=>{
+               // 2.Fetch Data from API and place in Local Storage.
+               await fetchData();
+               //3. Set Login State to True and store in localStorage
+               setIsLoggedIn(true);
+               localStorage.setItem('isLoggedIn','true');
+               // 4. Navigate to Dashboard.
+               if(JSON.parse(localStorage.getItem('users'))){
                     setLoading(false);
                     navigate('/dashboard');
-               },1000);
+               }
+                    
 
           }else{
                // Throw an Error to user
