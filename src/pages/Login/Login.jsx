@@ -40,7 +40,6 @@ const Login = () => {
                     navigate('/dashboard');
                }
                     
-
           }else{
                // Throw an Error to user
                setError(true);
